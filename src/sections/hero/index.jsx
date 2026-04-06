@@ -1,195 +1,153 @@
-function HeroComponent() {
+export default function Hero() {
   return (
-    <>
-      <div className="font-sans bg-white flex flex-col min-h-screen w-full">
-        <div>
-          <div className="bg-gray-200 px-4 py-4"></div>
-          <div className="bg-gray-200 md:overflow-hidden">
-            <div className="px-4 py-16">
-              <div className="relative w-full md:max-w-2xl md:mx-auto text-center">
-                <h1 className="font-bold text-gray-700 text-xl sm:text-2xl md:text-5xl leading-tight mb-6">
-                  Crea, Conecta, Lanza Rápido
-                </h1>
-                <p className="text-gray-600 md:text-xl md:px-18 md:mb-19">
-                  Un CMS ligero y flexible para que los negocios implementen
-                  ideas sin complicaciones.
-                </p>
-                <div className="hidden md:block h-40 w-40 rounded-full bg-blue-800 absolute right-0 bottom-0 -mb-64 -mr-48" />
-                <div className="hidden md:block h-5 w-5 rounded-full bg-yellow-500 absolute top-0 right-0 -mr-40 mt-32" />
+    <section className="px-4 pb-16 pt-8 sm:px-6 lg:px-10 lg:pb-24 lg:pt-10">
+      <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="max-w-2xl">
+          <div className="inline-flex rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-600 shadow-sm">
+            Negocios con más control, menos caos
+          </div>
+
+          <h1 className="mt-6 text-4xl font-semibold leading-tight tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
+            Convierte tu operación en un sistema claro,{" "}
+            <span className="text-slate-500">rentable y escalable</span>.
+          </h1>
+
+          <p className="mt-6 max-w-xl text-base leading-7 text-slate-600 sm:text-lg">
+            Qiknest centraliza métricas, automatizaciones y procesos para que tu
+            negocio crezca con estructura, no con más estrés.
+          </p>
+
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a
+              href="#waitlist"
+              className="inline-flex h-12 items-center justify-center rounded-full bg-slate-950 px-6 text-sm font-semibold text-white transition hover:bg-slate-800"
+            >
+              Solicitar acceso
+            </a>
+
+            <a
+              href="#producto"
+              className="inline-flex h-12 items-center justify-center rounded-full border border-slate-300 bg-white px-6 text-sm font-semibold text-slate-900 transition hover:bg-slate-50"
+            >
+              Ver lo que estamos construyendo
+            </a>
+          </div>
+
+          <div className="mt-8 flex flex-wrap gap-3">
+            <span className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm text-slate-600">
+              Métricas en tiempo real
+            </span>
+            <span className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm text-slate-600">
+              Automatización operativa
+            </span>
+            <span className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm text-slate-600">
+              Visibilidad financiera
+            </span>
+          </div>
+
+          <p className="mt-6 max-w-lg text-sm leading-6 text-slate-500">
+            Diseñado para negocios que ya venden, pero necesitan orden,
+            seguimiento y sistemas para seguir creciendo sin depender de una sola persona.
+          </p>
+        </div>
+
+        <div className="relative">
+          <div className="rounded-[36px] border border-slate-200 bg-[#f8f8f6] p-4 shadow-[0_20px_60px_rgba(15,23,42,0.06)] sm:p-5">
+            <div className="grid gap-4 md:grid-cols-2">
+              <div className="rounded-[28px] border border-slate-200 bg-white p-5">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <p className="text-sm text-slate-500">Ingresos del mes</p>
+                    <h3 className="mt-2 text-3xl font-semibold text-slate-950">
+                      $48,240
+                    </h3>
+                  </div>
+                  <div className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-300 text-slate-900">
+                    ↗
+                  </div>
+                </div>
+
+                <div className="mt-6 rounded-[24px] bg-slate-50 p-4">
+                  <p className="text-sm text-slate-500">Última actualización</p>
+                  <p className="mt-1 text-sm font-medium text-slate-900">
+                    Hoy, 9:42 AM
+                  </p>
+                </div>
+              </div>
+
+              <div className="rounded-[28px] border border-slate-200 bg-white p-5">
+                <p className="text-sm text-slate-500">Procesos automatizados</p>
+                <h3 className="mt-2 text-3xl font-semibold text-slate-950">12</h3>
+
+                <div className="mt-6 space-y-3">
+                  <div className="rounded-[22px] bg-slate-50 px-4 py-3 text-sm text-slate-700">
+                    Reportes semanales
+                  </div>
+                  <div className="rounded-[22px] bg-slate-50 px-4 py-3 text-sm text-slate-700">
+                    Seguimiento de métricas
+                  </div>
+                  <div className="rounded-[22px] bg-slate-50 px-4 py-3 text-sm text-slate-700">
+                    Alertas operativas
+                  </div>
+                </div>
               </div>
             </div>
-            <svg
-              className="fill-current bg-gray-200 text-white hidden md:block"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 1440 320"
-            >
-              <path
-                fillOpacity={1}
-                d="M0,64L120,85.3C240,107,480,149,720,149.3C960,149,1200,107,1320,85.3L1440,64L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
-              />
-            </svg>
-          </div>
-          <div
-            className="max-w-4xl mx-auto bg-white shadow-lg relative z-20 hidden md:block"
-            style={{ marginTop: "-320px", borderRadius: 20 }}
-          >
-            <div
-              className="h-20 w-20 rounded-full bg-yellow-500 absolute top-0 left-0 -ml-10 -mt-10"
-              style={{ zIndex: -1 }}
-            />
-            <div
-              className="h-5 w-5 rounded-full bg-blue-500 absolute top-0 left-0 -ml-32 mt-12"
-              style={{ zIndex: -1 }}
-            />
-            <div className="h-10 bg-white rounded-t-lg border-b border-gray-100" />
-            <div className="flex" style={{ height: 550 }}></div>
-          </div>
-          <div className="px-4 md:hidden">
-            <div
-              className="-mt-10 max-w-4xl mx-auto bg-white shadow-lg relative z-20"
-              style={{ borderRadius: 20 }}
-            >
-              <div className="h-10 bg-white rounded-t-lg border-b border-gray-100" />
-              <div className="flex" style={{ height: 340 }}>
-                <div className="w-16 bg-gray-200 px-2 py-6 overflow-hidden rounded-bl-lg">
-                  <div className="text-center mb-6">
-                    <div className="w-4 h-4 rounded-full bg-blue-800 mb-2 mx-auto" />
-                    <div className="h-2 w-8 mx-auto rounded-full bg-blue-800" />
-                  </div>
-                  <div className="text-center mb-6">
-                    <div className="w-4 h-4 rounded-full bg-gray-300 mb-2 mx-auto" />
-                    <div className="h-2 w-8 mx-auto rounded-full bg-gray-300" />
-                  </div>
-                  <div className="text-center mb-6">
-                    <div className="w-4 h-4 rounded-full bg-gray-300 mb-2 mx-auto" />
-                    <div className="h-2 w-8 mx-auto rounded-full bg-gray-300" />
-                  </div>
-                  <div className="text-center">
-                    <div className="w-4 h-4 rounded-full bg-gray-300 mb-2 mx-auto" />
-                    <div className="h-2 w-8 mx-auto rounded-full bg-gray-300" />
-                  </div>
+
+            <div className="mt-4 rounded-[28px] border border-slate-200 bg-white p-5">
+              <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+                <div>
+                  <p className="text-sm text-slate-500">Visibilidad del negocio</p>
+                  <h3 className="mt-2 text-2xl font-semibold text-slate-950">
+                    Todo más claro, en un solo lugar
+                  </h3>
                 </div>
-                <div className="flex-1 py-6 px-4">
-                  <div className="flex flex-wrap -mx-2">
-                    <div className="w-1/3 px-2">
-                      <div className="text-center mb-6 bg-white shadow rounded-lg px-2 py-3">
-                        <div className="w-4 h-4 rounded-full bg-green-600 mb-2 mx-auto" />
-                        <div className="h-2 w-8 mx-auto rounded-full bg-gray-200" />
-                      </div>
-                    </div>
-                    <div className="w-1/3 px-2">
-                      <div className="text-center mb-6 bg-white shadow rounded-lg px-2 py-3">
-                        <div className="w-4 h-4 rounded-full bg-blue-600 mb-2 mx-auto" />
-                        <div className="h-2 w-8 mx-auto rounded-full bg-gray-200" />
-                      </div>
-                    </div>
-                    <div className="w-1/3 px-2">
-                      <div className="text-center mb-6 bg-white shadow rounded-lg px-2 py-3">
-                        <div className="w-4 h-4 rounded-full bg-orange-600 mb-2 mx-auto" />
-                        <div className="h-2 w-8 mx-auto rounded-full bg-gray-200" />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex flex-wrap -mx-2 mb-6">
-                    <div className="w-1/2 px-2">
-                      <div className="shadow h-24 p-2 rounded-lg">
-                        <div className="h-20 percentage pt-2">
-                          <div className="h-2 bg-gray-200 w-24 mb-2 block" />
-                          <div className="h-2 bg-gray-200 w-12 mb-2 block" />
-                          <div className="h-2 bg-gray-200 w-20 mb-2 block" />
-                          <div className="h-2 bg-gray-200 w-8 mb-2 block" />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="w-1/2 px-2">
-                      <div className="rounded-lg shadow px-2 py-2">
-                        <div className="block w-8 h-2 rounded-full bg-gray-200 mb-2" />
-                        <div className="mb-2">
-                          <svg
-                            height={50}
-                            width={50}
-                            viewBox="0 0 20 20"
-                            className="mx-auto"
-                          >
-                            <circle r={10} cx={10} cy={10} fill="#ddd" />
-                            <circle
-                              r={5}
-                              cx={10}
-                              cy={10}
-                              fill="transparent"
-                              stroke="#eee"
-                              strokeWidth={10}
-                              strokeDasharray="11 31.4"
-                              transform="rotate(-90) translate(-20)"
-                            />
-                          </svg>
-                        </div>
-                        <div className="flex flex-wrap -mx-2">
-                          <div className="w-1/3 px-2">
-                            <div className="block h-2 rounded-full bg-gray-200" />
-                          </div>
-                          <div className="w-1/3 px-2">
-                            <div className="block h-2 rounded-full bg-gray-200" />
-                          </div>
-                          <div className="w-1/3 px-2">
-                            <div className="block h-2 rounded-full bg-gray-200" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="w-full flex flex-wrap mb-2">
-                    <div className="w-1/2">
-                      <div className="flex items-center">
-                        <div className="h-4 w-4 rounded-full bg-gray-200 mr-4" />
-                        <div>
-                          <div className="h-2 w-10 bg-gray-200 mb-1 rounded-full" />
-                          <div className="h-2 w-6 bg-gray-100 rounded-full" />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="w-1/2">
-                      <div className="flex items-center">
-                        <div className="h-4 w-4 rounded-full bg-gray-200 mr-4" />
-                        <div>
-                          <div className="h-2 w-10 bg-gray-200 mb-1 rounded-full" />
-                          <div className="h-2 w-6 bg-gray-100 rounded-full" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="w-full flex flex-wrap mb-6">
-                    <div className="w-1/2">
-                      <div className="flex items-center">
-                        <div className="h-4 w-4 rounded-full bg-gray-200 mr-4" />
-                        <div>
-                          <div className="h-2 w-10 bg-gray-200 mb-1 rounded-full" />
-                          <div className="h-2 w-6 bg-gray-100 rounded-full" />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="w-1/2">
-                      <div className="flex items-center">
-                        <div className="h-4 w-4 rounded-full bg-gray-200 mr-4" />
-                        <div>
-                          <div className="h-2 w-10 bg-gray-200 mb-1 rounded-full" />
-                          <div className="h-2 w-6 bg-gray-100 rounded-full" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="text-right flex justify-end">
-                    <div className="rounded-lg h-6 w-16 px-4 bg-gray-200 mr-2" />
-                    <div className="rounded-lg h-6 w-16 px-4 bg-green-400" />
-                  </div>
+
+                <div className="rounded-full border border-emerald-200 bg-emerald-50 px-4 py-2 text-sm font-medium text-emerald-700">
+                  Pipeline saludable
                 </div>
+              </div>
+
+              <div className="mt-6 flex h-52 items-end gap-3">
+                <div className="w-full rounded-t-[18px] bg-slate-200" style={{ height: "36%" }} />
+                <div className="w-full rounded-t-[18px] bg-slate-300" style={{ height: "52%" }} />
+                <div className="w-full rounded-t-[18px] bg-slate-400" style={{ height: "46%" }} />
+                <div className="w-full rounded-t-[18px] bg-slate-500" style={{ height: "68%" }} />
+                <div className="w-full rounded-t-[18px] bg-slate-700" style={{ height: "74%" }} />
+                <div className="w-full rounded-t-[18px] bg-slate-900" style={{ height: "88%" }} />
+              </div>
+            </div>
+
+            <div className="mt-4 grid gap-4 sm:grid-cols-3">
+              <div className="rounded-[24px] border border-slate-200 bg-white p-4">
+                <p className="text-xs uppercase tracking-wide text-slate-400">
+                  Ventas
+                </p>
+                <p className="mt-2 text-lg font-semibold text-slate-950">
+                  +18.4%
+                </p>
+              </div>
+
+              <div className="rounded-[24px] border border-slate-200 bg-white p-4">
+                <p className="text-xs uppercase tracking-wide text-slate-400">
+                  Operación
+                </p>
+                <p className="mt-2 text-lg font-semibold text-slate-950">
+                  Centralizada
+                </p>
+              </div>
+
+              <div className="rounded-[24px] border border-slate-200 bg-white p-4">
+                <p className="text-xs uppercase tracking-wide text-slate-400">
+                  Tiempo
+                </p>
+                <p className="mt-2 text-lg font-semibold text-slate-950">
+                  +12 hrs/mes
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 }
-
-export default HeroComponent;
